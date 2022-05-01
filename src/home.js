@@ -15,6 +15,6 @@ function greet() {
 }
 
 export default function home() {
-  const content = document.getElementById("content");
-  content.appendChild(greet());
+  const main = document.querySelector("main");
+  main.appendChild(greet());
 }

@@ -5,6 +5,8 @@ import "./style.css";
 import { createNavItem } from "./utils";
 
 import home from "./home";
+import menu from "./menu";
+import contact from "./contact";
 
 const content = document.getElementById("content");
 
@@ -38,6 +40,7 @@ function navigation() {
   const menuTab = createNavItem("Menu");
   const contactTab = createNavItem("Contact");
 
+  // add nav items to <ul>
   [homeTab, menuTab, contactTab].forEach((el) => ul.appendChild(el));
 
   nav.appendChild(ul);
@@ -45,7 +48,34 @@ function navigation() {
   return nav;
 }
 
+const main = document.createElement("main");
+
 content.appendChild(logo());
 content.appendChild(navigation());
+content.appendChild(main);
+
+// Tab switching
+const nav = document.querySelector(".nav");
+nav.addEventListener("click", function (e) {
+  if (!e.target.classList.contains("nav__item")) return;
+  const { tab } = e.target.dataset;
+
+  switch (tab) {
+    case "home":
+      main.innerHTML = "";
+      home();
+      break;
+    case "menu":
+      main.innerHTML = "";
+      menu();
+      break;
+    case "contact":
+      main.innerHTML = "";
+      contact();
+      break;
+  }
+
+  console.log(tab);
+});
 
 home();
