@@ -9,3 +9,21 @@
   margin-block-start: var(--size-4);
   color: var(--green-9);
 }
+
+.nav > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.nav__item {
+  padding-inline: var(--size-4);
+  font-size: var(--font-size-fluid-1);
+  cursor: pointer;
+}
+
+.nav__item:hover,
+.nav__item[data-active="true"] {
+  color: var(--green-9);
+}
