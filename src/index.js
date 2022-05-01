@@ -2,7 +2,7 @@ import "open-props/style";
 import "open-props/normalize";
 import "./style.css";
 
-import { createNavItem } from "./utils";
+import { createNavItem, activateTab } from "./utils";
 
 import home from "./home";
 import menu from "./menu";
@@ -59,18 +59,16 @@ const nav = document.querySelector(".nav");
 nav.addEventListener("click", function (e) {
   if (!e.target.classList.contains("nav__item")) return;
   const { tab } = e.target.dataset;
-
+  activateTab(tab);
+  main.innerText = "";
   switch (tab) {
     case "home":
-      main.innerHTML = "";
       home();
       break;
     case "menu":
-      main.innerHTML = "";
       menu();
       break;
     case "contact":
-      main.innerHTML = "";
       contact();
       break;
   }

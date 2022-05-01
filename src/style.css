@@ -1,3 +1,7 @@
+:root {
+  --clr-accent: var(--pink-9);
+}
+
 .center {
   width: min(100% - 2rem, 50rem);
   margin-inline: auto;
@@ -7,7 +11,7 @@
 .logo {
   font-family: "Great Vibes", cursive;
   margin-block-start: var(--size-4);
-  color: var(--green-9);
+  color: var(--clr-accent);
 }
 
 .nav > ul {
@@ -25,5 +29,15 @@
 
 .nav__item:hover,
 .nav__item[data-active="true"] {
-  color: var(--green-9);
+  color: var(--clr-accent);
+}
+
+main {
+  outline: 1px solid var(--clr-accent);
+  margin-block-start: var(--size-4);
+  padding-block: var(--size-4);
+}
+
+h2 {
+  max-inline-size: none;
 }

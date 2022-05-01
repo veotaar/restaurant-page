@@ -7,4 +7,10 @@ function createNavItem(itemName, active = false) {
   return el;
 }
 
-export { createNavItem };
+function activateTab(tabName) {
+  const tabs = document.querySelectorAll("[data-tab]");
+  tabs.forEach((tab) => (tab.dataset.active = false));
+  document.querySelector(`[data-tab=${tabName}]`).dataset.active = true;
+}
+
+export { createNavItem, activateTab };
