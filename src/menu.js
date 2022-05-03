@@ -6,14 +6,12 @@ export default function menu() {
   const div = document.createElement("div");
   div.classList.add("center");
 
-  const menuItems = document.createElement("h2");
-  menuItems.textContent = "Menu loaded from menu.js module";
-
-  div.appendChild(menuItems);
-
   div.appendChild(
-    menuItem("Teriyaki Tofu", "Tofu, onions, garlic, teriyaki sauce...", 7)
+    menuItem("Teriyaki Tofu", "Onion, garlic, teriyaki sauce...", 10)
   );
+  div.appendChild(menuItem("Seitan Steak", "VWG, lentils, soy sauce...", 15));
+  div.appendChild(menuItem("Seitan Burger", "with fries...", 15));
+  div.appendChild(menuItem("Falafel", "with tahini sauce...", 12));
 
   main.appendChild(div);
 }

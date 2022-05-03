@@ -1,5 +1,5 @@
 :root {
-  --clr-accent: var(--teal-7);
+  --clr-accent: var(--teal-9);
 }
 
 .center {
@@ -10,8 +10,13 @@
 
 .logo {
   font-family: "Great Vibes", cursive;
-  margin-block-start: var(--size-4);
+  margin-block-start: var(--size-8);
   color: var(--clr-accent);
+}
+
+.nav {
+  margin-block-start: var(--size-6);
+  margin-bottom: var(--size-8);
 }
 
 .nav > ul {
@@ -24,16 +29,31 @@
 .nav__item {
   padding-inline: var(--size-4);
   font-size: var(--font-size-fluid-1);
+  letter-spacing: var(--font-letterspacing-4);
   cursor: pointer;
 }
 
 .nav__item:hover,
 .nav__item[data-active="true"] {
   color: var(--clr-accent);
+  border-bottom: 1px solid var(--clr-accent);
+}
+
+.img {
+  margin-block-end: var(--size-7);
+}
+
+.location-img {
+  width: 75%;
+}
+
+.greet {
+  font-weight: var(--font-weight-4);
+  letter-spacing: var(--font-letterspacing-2);
 }
 
 main {
-  outline: 1px solid var(--clr-accent);
+  /* outline: 1px solid var(--clr-accent); */
   margin-block-start: var(--size-4);
   padding-block: var(--size-4);
 }
@@ -50,7 +70,9 @@ h2 {
   justify-content: space-between;
   align-items: center;
   padding: var(--size-2);
-  /* background-color: var(--gray-8); */
+}
+
+.menu-item:not(:last-child) {
   border-bottom: 1px solid var(--gray-8);
 }
 
@@ -61,6 +83,7 @@ h2 {
 .dish-name {
   font-weight: var(--font-weight-7);
   color: var(--gray-2);
+  letter-spacing: var(--font-letterspacing-3);
 }
 
 .dish-desc {
@@ -70,4 +93,19 @@ h2 {
 
 .price {
   font-size: var(--font-size-3);
+}
+
+/**************************/
+/*********CONTACT**********/
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-1);
+  margin-block-end: var(--size-2);
+}
+
+.contact-info__item {
+  text-align: start;
+  width: min(50rem);
 }
